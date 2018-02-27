@@ -1,0 +1,192 @@
+<html>
+
+<head>
+    <title>Congress Extrovert</title>
+    <link rel="stylesheet" href="simple-grid.min.css">
+    <link rel="stylesheet" href="debug.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Congress Metrics</h2>
+                <ul class="links">
+                    <li>General</li>
+                    <li>
+                        <a href="timing.html">Timing</a>
+                    </li>
+                    <li>
+                        <a href="pipeline.html">Pipeline</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="item">
+                    <div id="memstats-pie"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <div id="appstats-pie"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <div id="devstats-pie"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <div id="gwstats-pie"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <div id="inmsgstats-pie"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <div id="outmsgstats-pie"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="item">
+                    <strong>Applications</strong>
+                    <canvas id="app-cud" class="half-chart"> </canvas>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="item">
+                    <strong>Devices</strong>
+                    <canvas id="dev-cud" class="half-chart"> </canvas>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="item">
+                    <strong>Gateways</strong>
+                    <canvas id="gw-cud" class="half-chart"> </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="item">
+                    LoRa Messages
+                    <canvas id="lora-msg" class="double-chart"></canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="item">
+                    Message Errors
+                    <canvas id="lora-error" class="double-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/javascript" src="debug.js"></script>
+
+    <script id="stats-pie" type="text/x-handlebars-template">
+        <strong>{{ title }}</strong>
+        <canvas class="stats-value" id="{{ componentId }}"></canvas>
+    </script>
+
+    <script>
+
+        // Create the charts from the endpoint
+        function plotOverall(data) {
+            "use strict";
+            // Create application create/update/delete chart
+            createStackedBars('app-cud', [
+                { data: data['application.create.minute'], name: 'Created' },
+                { data: data['application.update.minute'], name: 'Updated' },
+                { data: data['application.delete.minute'], name: 'Deleted' }]);
+
+            createStackedBars('dev-cud', [
+                { data: data['device.create.minute'], name: 'Created' },
+                { data: data['device.update.minute'], name: 'Updated' },
+                { data: data['device.delete.minute'], name: 'Deleted' }]);
+
+            createStackedBars('gw-cud', [
+                { data: data['gateway.create.minute'], name: 'Created' },
+                { data: data['gateway.update.minute'], name: 'Updated' },
+                { data: data['gateway.delete.minute'], name: 'Deleted' }]);
+
+            createStackedBars('lora-msg', [
+                { data: data['lora.msg.confirmeddown.minute'], name: 'ConfirmedDataDown' },
+                { data: data['lora.msg.confirmedup.minute'], name: 'ConfirmedDataUp' },
+                { data: data['lora.msg.joinaccept.minute'], name: 'JoinAccept' },
+                { data: data['lora.msg.joinrequest.minute'], name: 'JoinRequest' },
+                { data: data['lora.msg.unconfirmedup.minute'], name: 'UnconfirmedDataUp' },
+                { data: data['lora.msg.unconfirmeddown.minute'], name: 'UnconfirmedDataDown' }
+            ]);
+
+            createStackedBars('lora-error', [
+                { data: data['lora.fcnt.failed.minute'], name: 'Frame Counter error' },
+                { data: data['lora.mic.failed.minute'], name: 'MIC validation error' }
+            ]);
+
+            createPieChart('memstats', [
+                { name: 'Mallocs', value: data.memstats.Mallocs },
+                { name: 'Frees', value: data.memstats.Frees },
+                { name: 'Live', value: data.memstats.Mallocs - data.memstats.Frees }
+            ]);
+
+            createPieChart('appstats', [
+                { name: 'Created', value: data['application.create.total'] },
+                { name: 'Updated', value: data['application.update.total'] },
+                { name: 'Deleted', value: data['application.delete.total'] }
+            ]);
+            createPieChart('devstats', [
+                { name: 'Created', value: data['device.create.total'] },
+                { name: 'Updated', value: data['device.update.total'] },
+                { name: 'Deleted', value: data['device.delete.total'] }
+            ]);
+            createPieChart('gwstats', [
+                { name: 'Created', value: data['gateway.create.total'] },
+                { name: 'Updated', value: data['gateway.update.total'] },
+                { name: 'Deleted', value: data['gateway.delete.total'] }
+            ]);
+
+            createPieChart('inmsgstats', [
+                { value: data['lora.msg.confirmedup.total'], name: 'ConfirmedDataUp' },
+                { value: data['lora.msg.joinrequest.total'], name: 'JoinRequest' },
+                { value: data['lora.msg.unconfirmedup.total'], name: 'UnconfirmedDataUp' }
+            ]);
+
+            createPieChart('outmsgstats', [
+                { value: data['lora.msg.confirmeddown.total'], name: 'UnconfirmedDataDown' },
+                { value: data['lora.msg.joinaccept.total'], name: 'JoinAccept' },
+                { value: data['lora.msg.unconfirmeddown.total'], name: 'UnconfirmedDataDown' }
+            ]);
+
+        }
+
+        window.onload = function () {
+
+            var pieSource = document.getElementById('stats-pie').innerHTML;
+            var pieTemplate = Handlebars.compile(pieSource);
+            document.getElementById('memstats-pie').innerHTML = pieTemplate({ title: 'Memory', componentId: 'memstats' });
+            document.getElementById('appstats-pie').innerHTML = pieTemplate({ title: 'Applications', componentId: 'appstats' });
+            document.getElementById('devstats-pie').innerHTML = pieTemplate({ title: 'Devices', componentId: 'devstats' });
+            document.getElementById('gwstats-pie').innerHTML = pieTemplate({ title: 'Gateways', componentId: 'gwstats' });
+            document.getElementById('inmsgstats-pie').innerHTML = pieTemplate({ title: 'Messages Received', componentId: 'inmsgstats' });
+            document.getElementById('outmsgstats-pie').innerHTML = pieTemplate({ title: 'Messages Sent', componentId: 'outmsgstats' });
+
+            loadData(plotOverall);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<html>
+
+<head>
+    <title>Congress Extrovert</title>
+    <link rel="stylesheet" href="simple-grid.min.css">
+    <link rel="stylesheet" href="debug.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Congress Metrics</h2>
+                <ul class="links">
+                    <li>
+                        <a href="index.html">General</a>
+                    </li>
+                    <li>
+                        <a href="timing.html">Timing</a>
+                    </li>
+                    <li>Pipeline</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="channel-flow" viewBox="0 0 600 60">
+                    <g transform="matrix(1.00898,0,0,1.04022,-397.326,-126.514)">
+                        <path d="M966.23,121.622C972.746,121.622 978.036,126.912 978.036,133.428L978.036,155.493L988.452,155.493L966.23,179.302L944.007,155.493L954.423,155.493L954.423,145.234L393.79,145.234L393.79,121.622L966.23,121.622Z"
+                            style="fill:rgb(151, 176, 190);" />
+                    </g>
+                </svg>
+
+                <!-- gateway processing -->
+                <div class="item processor" id="gw-in-processor">
+                </div>
+            </div>
+            <div class="col-3">
+                <!-- gateway channel -->
+                <div class="item channel" id="gw-in-channel">
+                </div>
+            </div>
+        </div>
+        <div class=" row">
+            <div class="col-4"></div>
+            <div class="col-3">
+                <!-- decoder channel -->
+                <div class="item channel" id="decoder-channel">
+                </div>
+            </div>
+            <div class="col-4">
+                <!--  decoder -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="channel-reverse-flow" viewBox="0 0 600 60">
+                    <g transform="matrix(-1.00898,0,-0,1.04022,997.326,-126.514)">
+                        <path d="M966.23,121.622C972.746,121.622 978.036,126.912 978.036,133.428L978.036,155.493L988.452,155.493L966.23,179.302L944.007,155.493L954.423,155.493L954.423,145.234L393.79,145.234L393.79,121.622L966.23,121.622Z"
+                            style="fill:rgb(151, 176, 190);" />
+                    </g>
+                </svg>
+
+                <div class="item processor" id="decoder-processor">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <!-- Decrypter -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="channel-flow" viewBox="0 0 600 60">
+                    <g transform="matrix(1.00898,0,0,1.04022,-397.326,-126.514)">
+                        <path d="M966.23,121.622C972.746,121.622 978.036,126.912 978.036,133.428L978.036,155.493L988.452,155.493L966.23,179.302L944.007,155.493L954.423,155.493L954.423,145.234L393.79,145.234L393.79,121.622L966.23,121.622Z"
+                            style="fill:rgb(151, 176, 190);" />
+                    </g>
+                </svg>
+
+
+                <div class="item processor" id="decrypter-processor">
+                </div>
+            </div>
+            <div class="col-3">
+                <!-- decrypter channel -->
+                <div class="item channel" id="decrypter-channel">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-3">
+                <!-- MACProcessor channel -->
+                <div class="item channel" id="mac-channel">
+                </div>
+            </div>
+            <div class="col-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="channel-reverse-flow" viewBox="0 0 600 60">
+                    <g transform="matrix(-1.00898,0,-0,1.04022,997.326,-126.514)">
+                        <path d="M966.23,121.622C972.746,121.622 978.036,126.912 978.036,133.428L978.036,155.493L988.452,155.493L966.23,179.302L944.007,155.493L954.423,155.493L954.423,145.234L393.79,145.234L393.79,121.622L966.23,121.622Z"
+                            style="fill:rgb(151, 176, 190);" />
+                    </g>
+                </svg>
+
+                <!-- MACProcessor -->
+                <div class="item processor" id="mac-processor">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <!-- scheduler -->
+                <div class="item processor" id="scheduler-in-processor">
+                </div>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="channel-flow" viewBox="0 0 600 60">
+                    <g transform="matrix(1.00898,0,0,1.04022,-397.326,-126.514)">
+                        <path d="M966.23,121.622C972.746,121.622 978.036,126.912 978.036,133.428L978.036,155.493L988.452,155.493L966.23,179.302L944.007,155.493L954.423,155.493L954.423,145.234L393.79,145.234L393.79,121.622L966.23,121.622Z"
+                            style="fill:rgb(151, 176, 190);" />
+                    </g>
+                </svg>
+
+                <!-- scheduler -->
+                <div class="item processor" id="scheduler-out-processor">
+                </div>
+            </div>
+            <div class="col-3">
+                <!-- scheduler channel -->
+                <div class="item channel" id="scheduler-out-channel">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-3">
+                <!-- encoder channel -->
+                <div class="item channel" id="encoder-channel">
+                </div>
+            </div>
+            <div class="col-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="channel-reverse-flow" viewBox="0 0 600 60">
+                    <g transform="matrix(-1.00898,0,-0,1.04022,997.326,-126.514)">
+                        <path d="M966.23,121.622C972.746,121.622 978.036,126.912 978.036,133.428L978.036,155.493L988.452,155.493L966.23,179.302L944.007,155.493L954.423,155.493L954.423,145.234L393.79,145.234L393.79,121.622L966.23,121.622Z"
+                            style="fill:rgb(151, 176, 190);" />
+                    </g>
+                </svg>
+
+                <!-- encoder -->
+                <div class="item processor" id="encoder-processor">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <!-- gateway output -->
+                <div class="item processor" id="gw-out-processor">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/javascript" src="debug.js"></script>
+
+    <script id="processor-chart" type="text/x-handlebars-template">
+        <strong>{{ title }}</strong>
+        <!-- Yes this is old school -->
+        <table border="0" cellspacing="0" width="100%">
+            <tr>
+                <td rowspan="7" width="80%">
+                    <canvas class="process-chart" id="{{ componentId }}"></canvas>
+                </td>
+                <td class="smallcap">Min</td>
+            </tr>
+            <tr>
+                <td class="minorval" id="{{ componentId }}-min"></td>
+            </tr>
+            <tr>
+                <td class="smallcap">Average</td>
+            </tr>
+            <tr>
+                <td class="majorval" id="{{ componentId }}-avg"></td>
+
+            </tr>
+            <tr>
+                <td class="smallcap">Max</td>
+            </tr>
+            <tr>
+
+                <td class="minorval" id="{{ componentId }}-max"></td>
+            </tr>
+            <tr>
+                <td><!-- just to fill up --></td>
+            </tr>
+        </table>
+    </script>
+
+    <script id="channel-chart" type="text/x-handlebars-template">
+        <table border="0" cellspacing="0" width="100%">
+                <tr>
+                    <td class="smallcap">Min</td>
+                    <td class="smallcap">Average</td>
+                    <td class="smallcap">Max</td>
+                </tr>
+                <tr>
+                    <td class="minorval" id="{{ componentId }}-min"></td>
+                    <td class="majorval" id="{{ componentId }}-avg"></td>
+                    <td class="minorval" id="{{ componentId }}-max"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <canvas class="channel-chart" id="{{ componentId }}">
+                        </canvas>
+                    </td>
+                </tr>
+            </table>
+    </script>
+
+    <script>
+
+        function plotPipeline(data) {
+            "use strict";
+
+            // Pipeline charts
+            createHistogram('gw-in-chan', data['gwif.channel.send.histogram'], data['gwif.channel.send.average'], true);
+            createHistogram('gw-in-proc', data['gateway.receive.timing.histogram'], data['gateway.receive.timing.average'], true);
+
+            createHistogram('decoder-chan', data['decoder.channel.send.histogram'], data['decoder.channel.send.average'], true);
+            createHistogram('decoder-proc', data['decoder.timing.histogram'], data['decoder.timing.average'], true);
+
+            createHistogram('decrypter-chan', data['decrypter.channel.send.histogram'], data['decrypter.channel.send.average'], true);
+            createHistogram('decrypter-proc', data['decrypter.timing.histogram'], data['decrypter.timing.average'], true);
+
+            createHistogram('mac-chan', data['macprocessor.channel.send.histogram'], data['macprocessor.channel.send.average'], true);
+            createHistogram('mac-proc', data['macprocessor.timing.histogram'], data['macprocessor.timing.average'], true);
+
+
+            createHistogram('scheduler-out-chan', data['scheduler.channel.sends.histogram'], data['scheduler.channel.sends.average'], true);
+            createHistogram('scheduler-in-proc', data['scheduler.process.timing.histogram'], data['scheduler.process.timing.average'], true);
+            createHistogram('scheduler-out-proc', data['scheduler.send.timing.histogram'], data['scheduler.send.timing.average'], true);
+
+            createHistogram('encoder-chan', data['encoder.channel.send.histogram'], data['encoder.channel.send.average'], true);
+            createHistogram('encoder-proc', data['encoder.timing.histogram'], data['encoder.timing.average'], true);
+
+            createHistogram('gw-out-proc', data['gateway.send.timing.histogram'], data['gateway.send.timing.average'], true);
+        }
+
+        window.onload = function () {
+
+            var processorSource = document.getElementById('processor-chart').innerHTML;
+            var processorTemplate = Handlebars.compile(processorSource);
+
+            document.getElementById('gw-in-processor').innerHTML = processorTemplate({ title: 'Gateway In', componentId: 'gw-in-proc' });
+            document.getElementById('decoder-processor').innerHTML = processorTemplate({ title: 'Decoder', componentId: 'decoder-proc' });
+            document.getElementById('decrypter-processor').innerHTML = processorTemplate({ title: 'Decrypter', componentId: 'decrypter-proc' });
+            document.getElementById('mac-processor').innerHTML = processorTemplate({ title: 'MACProcessor', componentId: 'mac-proc' });
+            document.getElementById('scheduler-in-processor').innerHTML = processorTemplate({ title: 'Scheduler In', componentId: 'scheduler-in-proc' });
+            document.getElementById('scheduler-out-processor').innerHTML = processorTemplate({ title: 'Scheduler Send', componentId: 'scheduler-out-proc' });
+            document.getElementById('encoder-processor').innerHTML = processorTemplate({ title: 'Encoder', componentId: 'encoder-proc' });
+            document.getElementById('gw-out-processor').innerHTML = processorTemplate({ title: 'Gateway Out', componentId: 'gw-out-proc' });
+
+            var channelSource = document.getElementById('channel-chart').innerHTML;
+            var channelTemplate = Handlebars.compile(channelSource);
+
+            document.getElementById('gw-in-channel').innerHTML = channelTemplate({ componentId: 'gw-in-chan' });
+            document.getElementById('decoder-channel').innerHTML = channelTemplate({ componentId: 'decoder-chan' });
+            document.getElementById('decrypter-channel').innerHTML = channelTemplate({ componentId: 'decrypter-chan' });
+            document.getElementById('mac-channel').innerHTML = channelTemplate({ componentId: 'mac-chan' });
+            document.getElementById('scheduler-out-channel').innerHTML = channelTemplate({ componentId: 'scheduler-out-chan' });
+            document.getElementById('encoder-channel').innerHTML = channelTemplate({ componentId: 'encoder-chan' });
+
+            loadData(plotPipeline);
+        }
+
+    </script>
+</body>
+
+</html>

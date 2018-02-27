@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Congress Extrovert</title>
+    <link rel="stylesheet" href="simple-grid.min.css">
+    <link rel="stylesheet" href="debug.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Congress Metrics</h2>
+                    <ul class="links">
+                    <li><a href="index.html">General</a></li>
+                    <li>Timing</li>
+                    <li><a href="pipeline.html">Pipeline</a></li>
+                </ul>                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="item timing" id="input-timing"></div>
+            </div>
+            <div class="col-6">
+                <div class="item timing" id="output-timing"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/javascript" src="debug.js"></script>
+
+    <script id="big-timing-chart" type="text/x-handlebars-template">
+        <strong>{{ title }}</strong>
+        <div class="row">
+            <div class="col-10">
+                    <canvas class="timing-chart" id="{{ componentId }}"></canvas>
+                </div>
+            <div class="col-2 timing-stats">
+                <div class="row">
+                    <div class="col-12 timing-value-caption">Min</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 timing-value-small" id="{{ componentId }}-min"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 timing-value-caption">Average</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 timing-value-large" id="{{ componentId }}-avg"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 timing-value-caption">Max</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 timing-value-small" id="{{ componentId }}-max"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script>
+        function plotInputOutput(data) {
+            "use strict";
+            // These aren't correct. PR is coming up.
+            createHistogram('intiming', data['gwif.channel.send.histogram'], data['gwif.channel.send.average']);
+            createHistogram('outtiming', data['decoder.channel.send.histogram'], data['decoder.channel.send.average']);
+        
+        }
+        
+        window.onload = function () {
+            var templateSource = document.getElementById('big-timing-chart').innerHTML;
+            var timingTemplate = Handlebars.compile(templateSource);
+
+            document.getElementById('input-timing').innerHTML = timingTemplate({title:'Input timing (GW -> Scheduler)', componentId:'intiming'});
+            document.getElementById('output-timing').innerHTML = timingTemplate({title:'Output timing (Scheduler -> GW)', componentId: 'outtiming'});
+
+            loadData(plotInputOutput);
+        }
+
+    </script>
+</body>
+</html>

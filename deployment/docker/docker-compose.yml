@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  db:
+    image: telenordigital:congressdb
+    networks:
+      - connet
+    ports:
+      - 5432:5432
+  mqtt:
+    image: eclipse-mosquitto
+    ports: 
+      - 1883:1883
+      - 9001:9001
+    volumes:
+      - "./mqtt-broker/mosquitto:/mosquitto"
+    networks:
+      - connet
+
+  congress:
+    image: telenordigital:congress
+    ports: 
+      - 8080:8080
+      - 8000:8000/udp
+    networks: 
+      - connet
+    links:
+      - db
+      - mqtt
+    environment:
+      - CONGRESS_DB=--connectionstring postgres://congress:thepassword@db:5432/congress?sslmode=disable
+
+networks:
+  connet:
+

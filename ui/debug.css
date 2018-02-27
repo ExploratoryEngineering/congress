@@ -1,0 +1,123 @@
+html {
+    height: 100%;
+    background: linear-gradient(45deg, #D4D4D4, #F0F0F0);
+}
+body {
+    height: 2048px;
+}
+
+div.item {
+    width: 100%;
+    -border: solid 1px #d2d2d2;
+    padding: 1em;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: #EEEEEE;
+}
+
+div.item p {
+    margin: 0;
+    padding: 0;
+}
+
+div.container {
+    min-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    padding: 0;
+}
+
+div.half-chart {
+    height: 200px;
+}
+
+div.double-chart {
+    height: 300px;
+}
+
+div.stats-value {
+    height: 200px;
+}
+
+div.timing-chart {
+    height: 300px;
+}
+
+div.timing-value-caption {
+    font-size: 10pt;
+    padding: 0;
+    margin: 0;
+}
+
+div.timing-value-small {
+    font-size: 14pt;
+    text-align: right;
+}
+
+div.timing-value-large {
+    font-size: 150%;
+    text-align: right;
+    font-weight: bold;
+}
+
+div.channel {
+    margin-top: 50px;
+}
+
+svg.channel-flow {
+    position: absolute;
+    top: 120px;
+    left: 20%;
+    z-index: -1;
+    width: 60%;
+    height: 120px;
+}
+
+svg.channel-reverse-flow {
+    position: absolute;
+    top: 120px;
+    left: 20%;
+    z-index: -1;
+    width: 60%;
+    height: 120px;
+}
+
+canvas.channel-chart {
+    width: 150px !important;
+    height: 50px !important;
+}
+
+td.smallcap {
+    color: silver;
+    font-size: 7pt;
+}
+
+td.minorval {
+    font-size: 10pt;
+}
+
+td.majorval {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+canvas.process-chart {
+    width: 400px !important;
+    height: 150px !important;
+}
+
+ul.links {
+    display: inline-block;
+}
+ul.links li {
+    display: inline-block;
+    width: 150px;
+    height: 20px;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+ul.links li a {
+    font-size: 12pt;
+    font-weight: lighter;
+}

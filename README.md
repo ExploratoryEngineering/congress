@@ -44,15 +44,6 @@ by running `./congress -printschema`.
 A Docker-compose configuration file can be found in `deployment/docker`. More
 details can be found in the [README](deployment/docker/README.md).
 
-### Running in AWS (with Terraform)
-
-There are Terraform scripts in `deployment/terraform`. Modify `settings.tf`
-and `congress.tf` to match your setup and run as usual. This will bring up a
-PostgreSQL RDS instance and an instance for Congress with appropriate security
-groups. Check the [README.md file](deployment/terraform/README.md) for more details.
-
-A medium instance should be able to support up to 1M devices without
-
 ## Testing tools
 
 We've made a few tools that can be used when testing Congress:

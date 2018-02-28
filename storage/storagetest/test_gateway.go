@@ -18,9 +18,9 @@ import (
 	"net"
 	"testing"
 
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 // GatewayStorageTest is a generic test for gateway storage

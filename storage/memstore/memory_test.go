@@ -17,7 +17,7 @@ package memstore
 import (
 	"testing"
 
-	"github.com/comoyo/congress/storage/storagetest"
+	"github.com/ExploratoryEngineering/congress/storage/storagetest"
 )
 
 func TestMemoryStorage(t *testing.T) {

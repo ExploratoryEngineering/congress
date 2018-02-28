@@ -23,7 +23,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/comoyo/congress/model"
+	"github.com/ExploratoryEngineering/congress/model"
 )
 
 func tagResourceTest(t *testing.T, rootURL string) {

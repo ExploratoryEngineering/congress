@@ -17,7 +17,7 @@ package monitoring
 import (
 	"sync"
 
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 // MessageCounter holds the counters for a single gateway or application

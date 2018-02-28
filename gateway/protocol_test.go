@@ -17,7 +17,7 @@ package gateway
 import (
 	"testing"
 
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 func TestBinaryMarshal(t *testing.T) {

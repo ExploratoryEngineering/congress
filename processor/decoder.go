@@ -15,10 +15,10 @@ package processor
 //limitations under the License.
 //
 import (
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/monitoring"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/server"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/monitoring"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/server"
 )
 
 // Decoder is the process that decodes the bytes received from the gateway interface into go structs.

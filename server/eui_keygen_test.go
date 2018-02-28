@@ -20,8 +20,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/storage/memstore"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/storage/memstore"
 )
 
 func TestSimpleKeygen(t *testing.T) {

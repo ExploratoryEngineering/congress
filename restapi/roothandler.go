@@ -18,7 +18,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/comoyo/congress/logging"
+	"github.com/ExploratoryEngineering/congress/logging"
 )
 
 // StatusHandler shows the status of the server

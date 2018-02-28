@@ -17,7 +17,7 @@ package server
 import (
 	"encoding/hex"
 
-	"github.com/comoyo/congress/model"
+	"github.com/ExploratoryEngineering/congress/model"
 )
 
 // transport implements the actual transport

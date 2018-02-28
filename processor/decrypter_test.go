@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/server"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/server"
 )
 
 func createEncryptedTestMessage() protocol.PHYPayload {

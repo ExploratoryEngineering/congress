@@ -15,8 +15,8 @@ package storage
 //limitations under the License.
 //
 import (
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 // ApplicationStorage is used to store and retrieve application objects in a storage backend.

@@ -15,8 +15,8 @@ package processor
 //limitations under the License.
 //
 import (
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/server"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/server"
 )
 
 // Pipeline is the main processing pipeline for the server. Each step in

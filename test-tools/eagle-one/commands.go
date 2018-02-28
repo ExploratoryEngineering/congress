@@ -20,7 +20,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 	lassie "github.com/telenordigital/lassie-go"
 )
 

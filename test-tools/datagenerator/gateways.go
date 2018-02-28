@@ -19,9 +19,9 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 func generateGateways(id model.UserID, count int, datastore storage.Storage) []model.Gateway {

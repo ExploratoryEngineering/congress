@@ -19,7 +19,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/comoyo/congress/logging"
+	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/telenordigital/lassie-go"
 )
 

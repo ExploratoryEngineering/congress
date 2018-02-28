@@ -20,11 +20,11 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/server"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 func generateDevices(count int, app model.Application, datastore storage.Storage, keyGen *server.KeyGenerator, callback func(createdDevice model.Device)) {

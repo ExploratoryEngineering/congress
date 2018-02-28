@@ -17,7 +17,7 @@ package frequency
 // Stub functions for frequency management.
 
 import (
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 // TODO: Replace with proper frequency management. These values are the defaults

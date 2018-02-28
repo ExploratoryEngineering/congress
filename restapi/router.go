@@ -21,7 +21,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/comoyo/congress/logging"
+	"github.com/ExploratoryEngineering/congress/logging"
 )
 
 type pathParameter string

@@ -15,8 +15,8 @@ package processor
 //limitations under the License.
 //
 import (
-	"github.com/comoyo/congress/gateway"
-	"github.com/comoyo/congress/server"
+	"github.com/ExploratoryEngineering/congress/gateway"
+	"github.com/ExploratoryEngineering/congress/server"
 )
 
 // GwForwarder is the generic gateway interface. All of the communication is

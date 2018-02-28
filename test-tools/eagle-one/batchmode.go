@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/comoyo/congress/logging"
+	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/telenordigital/lassie-go"
 )
 

@@ -18,7 +18,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 // GWMessage is the gateway message

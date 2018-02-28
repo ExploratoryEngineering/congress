@@ -15,7 +15,7 @@ package main
 //limitations under the License.
 //
 import (
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/telenordigital/lassie-go"
 )
 

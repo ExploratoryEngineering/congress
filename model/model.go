@@ -24,8 +24,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 // Data model for LoRaWAN network. The data model is used in parts of the decoding

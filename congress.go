@@ -17,15 +17,15 @@ package main
 import (
 	"errors"
 
-	"github.com/comoyo/congress/gateway"
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/monitoring"
-	"github.com/comoyo/congress/processor"
-	"github.com/comoyo/congress/restapi"
-	"github.com/comoyo/congress/server"
-	"github.com/comoyo/congress/storage"
-	"github.com/comoyo/congress/storage/dbstore"
-	"github.com/comoyo/congress/storage/memstore"
+	"github.com/ExploratoryEngineering/congress/gateway"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/monitoring"
+	"github.com/ExploratoryEngineering/congress/processor"
+	"github.com/ExploratoryEngineering/congress/restapi"
+	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/congress/storage/dbstore"
+	"github.com/ExploratoryEngineering/congress/storage/memstore"
 )
 
 // Server is the main Congress server process. It will launch several

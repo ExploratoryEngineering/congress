@@ -21,8 +21,8 @@ import (
 
 	"sync"
 
-	"github.com/comoyo/congress/events/gwevents"
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/events/gwevents"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 // Simple one-shot route test

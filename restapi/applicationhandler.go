@@ -22,15 +22,15 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/comoyo/congress/monitoring"
+	"github.com/ExploratoryEngineering/congress/monitoring"
 
 	"golang.org/x/net/websocket"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/server"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 // The maximum number of data packets to return from the .../data endpoint

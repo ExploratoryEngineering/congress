@@ -20,9 +20,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/storage"
-	"github.com/comoyo/congress/storage/storagetest"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/congress/storage/storagetest"
 )
 
 var pgdb *postgresEmbedded

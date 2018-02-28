@@ -17,7 +17,7 @@ package dbstore
 import (
 	"testing"
 
-	"github.com/comoyo/congress/logging"
+	"github.com/ExploratoryEngineering/congress/logging"
 )
 
 // Test the embedded PostgreSQL database

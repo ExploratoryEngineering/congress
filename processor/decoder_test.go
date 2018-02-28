@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/comoyo/congress/server"
+	"github.com/ExploratoryEngineering/congress/server"
 )
 
 // Ensure the decoder behaves when one channel closes

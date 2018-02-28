@@ -19,9 +19,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 func equalDevices(a model.Device, b model.Device) bool {

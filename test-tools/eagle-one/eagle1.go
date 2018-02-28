@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/protocol"
 	lassie "github.com/telenordigital/lassie-go"
 )
 

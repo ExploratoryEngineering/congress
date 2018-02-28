@@ -22,7 +22,7 @@ import (
 	"encoding/hex"
 	"math"
 
-	"github.com/comoyo/congress/logging"
+	"github.com/ExploratoryEngineering/congress/logging"
 )
 
 /*

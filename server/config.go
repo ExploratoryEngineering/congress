@@ -21,8 +21,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 // Configuration holds the configuration for the system

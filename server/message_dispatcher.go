@@ -21,8 +21,8 @@ import (
 
 	"fmt"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/model"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/model"
 )
 
 // This is the implementation of the message dispatcher process that grabs

@@ -17,11 +17,11 @@ package server
 import (
 	"time"
 
-	"github.com/comoyo/congress/band"
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/monitoring"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/band"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/monitoring"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 // Pipeline data structures used by the server

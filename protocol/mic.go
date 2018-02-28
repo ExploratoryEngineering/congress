@@ -17,7 +17,7 @@ package protocol
 import (
 	"encoding/binary"
 
-	"github.com/comoyo/congress/cmac"
+	"github.com/ExploratoryEngineering/congress/cmac"
 )
 
 // CalculateMIC calculates the Message Integrity Code [4.4]

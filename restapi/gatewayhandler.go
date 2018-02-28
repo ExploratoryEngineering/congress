@@ -22,11 +22,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/comoyo/congress/events/gwevents"
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/monitoring"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/events/gwevents"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/monitoring"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/storage"
 	"golang.org/x/net/websocket"
 )
 

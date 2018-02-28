@@ -18,8 +18,8 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 // The protocol parts - ie the Semtech packet forwarder

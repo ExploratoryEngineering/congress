@@ -19,7 +19,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/comoyo/congress/logging"
+	"github.com/ExploratoryEngineering/congress/logging"
 )
 
 func TestDecodeJoinAccept(t *testing.T) {

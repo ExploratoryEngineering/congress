@@ -18,7 +18,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 // SimpleKeySequence tests a simple sequence

@@ -17,7 +17,7 @@ package memstore
 import (
 	"sync"
 
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 type memoryKeySequenceStorage struct {

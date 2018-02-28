@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 // This is borderline gaming the system but the code should at least run through once

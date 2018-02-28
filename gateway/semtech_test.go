@@ -23,11 +23,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/server"
-	"github.com/comoyo/congress/storage/memstore"
-	"github.com/comoyo/congress/utils"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/congress/storage/memstore"
+	"github.com/ExploratoryEngineering/congress/utils"
 )
 
 type serverConfig struct {

@@ -23,10 +23,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/server"
-	"github.com/comoyo/congress/storage/memstore"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/congress/storage/memstore"
 )
 
 var ma = protocol.MA{Prefix: [5]byte{0, 1, 3, 4, 5}, Size: protocol.MALarge}

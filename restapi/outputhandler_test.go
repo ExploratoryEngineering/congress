@@ -23,9 +23,9 @@ import (
 
 	"reflect"
 
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/server"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/server"
 )
 
 // Create a new output by POSTing to the resource

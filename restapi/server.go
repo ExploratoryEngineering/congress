@@ -20,10 +20,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/server"
-	"github.com/comoyo/congress/utils"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/congress/utils"
 	"github.com/telenordigital/goconnect"
 	"golang.org/x/net/websocket"
 )

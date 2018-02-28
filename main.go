@@ -20,9 +20,9 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/server"
-	"github.com/comoyo/congress/storage/dbstore"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/congress/storage/dbstore"
 )
 
 var config = server.NewDefaultConfig()

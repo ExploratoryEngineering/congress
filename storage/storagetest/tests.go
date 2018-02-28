@@ -21,9 +21,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 // This is a set of default tests for storage backends.

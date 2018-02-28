@@ -21,8 +21,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 func storeApplication(t *testing.T, application apiApplication, url string, expectedStatus int) apiApplication {

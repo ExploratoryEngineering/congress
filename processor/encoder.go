@@ -17,11 +17,11 @@ package processor
 import (
 	"time"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/monitoring"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/server"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/monitoring"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 // Encoder receives LoRaMessage data structures on a channel, encodes into a

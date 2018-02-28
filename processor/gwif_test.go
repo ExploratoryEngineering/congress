@@ -17,8 +17,8 @@ package processor
 import (
 	"testing"
 
-	"github.com/comoyo/congress/server"
-	"github.com/comoyo/congress/utils"
+	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/congress/utils"
 )
 
 // Test strings, base 64 encoded.

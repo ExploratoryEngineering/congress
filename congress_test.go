@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/comoyo/congress/server"
+	"github.com/ExploratoryEngineering/congress/server"
 )
 
 var (

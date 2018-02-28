@@ -18,7 +18,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 func TestMessageCounter(t *testing.T) {

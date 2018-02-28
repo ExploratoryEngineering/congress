@@ -22,7 +22,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 var payloadTemplate string

@@ -19,12 +19,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/comoyo/congress/storage/dbstore"
+	"github.com/ExploratoryEngineering/congress/storage/dbstore"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/server"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/server"
 )
 
 var params struct {

@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 // This will be the db-backed sequence implementation

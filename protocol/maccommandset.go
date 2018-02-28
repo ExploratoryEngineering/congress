@@ -17,7 +17,7 @@ package protocol
 import (
 	"sort"
 
-	"github.com/comoyo/congress/logging"
+	"github.com/ExploratoryEngineering/congress/logging"
 )
 
 // MACCommandSet is a collection of MAC commands. The command sets have an

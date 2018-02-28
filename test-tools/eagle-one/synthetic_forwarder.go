@@ -23,9 +23,9 @@ import (
 	"encoding/base64"
 	"encoding/json"
 
-	cgw "github.com/comoyo/congress/gateway"
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/protocol"
+	cgw "github.com/ExploratoryEngineering/congress/gateway"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 // SyntheticForwarder is a synthetic packet forwarder that exposes two channels

@@ -19,7 +19,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 var defaultMA protocol.MA

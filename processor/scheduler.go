@@ -17,12 +17,12 @@ package processor
 import (
 	"time"
 
-	"github.com/comoyo/congress/monitoring"
+	"github.com/ExploratoryEngineering/congress/monitoring"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/protocol"
-	"github.com/comoyo/congress/server"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/server"
 )
 
 // Scheduler is the process that schedules downlink frames. The sceduler reads

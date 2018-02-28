@@ -25,8 +25,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/utils"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/utils"
 )
 
 // PostgresEmbedded embeds PostgreSQL and allows it to be controlled from

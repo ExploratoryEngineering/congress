@@ -17,8 +17,8 @@ package server
 import (
 	"sync"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 type route struct {

@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/comoyo/congress/logging"
-	"github.com/comoyo/congress/model"
+	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/eclipse/paho.mqtt.golang"
 )
 

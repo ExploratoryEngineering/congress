@@ -17,8 +17,8 @@ package memstore
 import (
 	"sync"
 
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 type memToken struct {

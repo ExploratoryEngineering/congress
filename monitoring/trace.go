@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/comoyo/congress/logging"
+	"github.com/ExploratoryEngineering/congress/logging"
 )
 
 //

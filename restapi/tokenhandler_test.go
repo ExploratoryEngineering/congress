@@ -20,7 +20,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/comoyo/congress/model"
+	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/telenordigital/goconnect"
 )
 

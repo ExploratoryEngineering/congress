@@ -18,7 +18,7 @@ import (
 	"math/rand"
 	"net"
 
-	"github.com/comoyo/congress/protocol"
+	"github.com/ExploratoryEngineering/congress/protocol"
 )
 
 func randomEUI() protocol.EUI {

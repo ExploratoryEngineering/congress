@@ -17,8 +17,8 @@ package storagetest
 import (
 	"testing"
 
-	"github.com/comoyo/congress/model"
-	"github.com/comoyo/congress/storage"
+	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/congress/storage"
 )
 
 // TokenStorageTest tests a storage.TokenStorage instance

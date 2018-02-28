@@ -17,7 +17,7 @@ package monitoring
 import (
 	"time"
 
-	"github.com/comoyo/congress/logging"
+	"github.com/ExploratoryEngineering/congress/logging"
 )
 
 // Timer is responsible for timings throughout the pipeline. Timing

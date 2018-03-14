@@ -50,6 +50,7 @@ type transportFactory func(model.TransportConfig) transport
 
 var transports = map[string]transportFactory{
 	"mqtt":   mqttTransportFromConfig,
+	"amqp":   amqpTransportFromConfig,
 	"log":    newLogTransport,
 	"awsiot": awsiotTransportFromConfig,
 }

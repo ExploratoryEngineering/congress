@@ -1,4 +1,5 @@
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -131,4 +132,17 @@ func TestInvalidMemoryLatency(t *testing.T) {
 		t.Fatalf("min/max 0 but it fails: %v", err)
 	}
 
+}
+
+func TestInvalidACMEConfig(t *testing.T) {
+	config := NewDefaultConfig()
+	config.MemoryDB = true
+	config.ACMECert = true
+	if err := config.Validate(); err == nil {
+		t.Fatal("Expected error when no ACME host name is set")
+	}
+	config.ACMEHost = "host.example.com"
+	if err := config.Validate(); err != nil {
+		t.Fatal("Did not expect error when ACME host name is set: ", err)
+	}
 }

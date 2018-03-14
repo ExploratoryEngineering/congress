@@ -1,4 +1,5 @@
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -58,6 +59,9 @@ type Configuration struct {
 	DBMaxConnections      int
 	DBIdleConnections     int
 	DBConnLifetime        time.Duration
+	ACMECert              bool   // AutoCert via Let's Encrypt
+	ACMEHost              string // AutoCert hostname
+	ACMESecretDir         string
 }
 
 // This is the default configuration
@@ -150,6 +154,9 @@ func (cfg *Configuration) Validate() error {
 	}
 	if cfg.MemoryMaxLatencyMs > 0 && cfg.MemoryMinLatencyMs == cfg.MemoryMaxLatencyMs {
 		return errors.New("min and max memory latency cannot be equal")
+	}
+	if cfg.ACMECert && cfg.ACMEHost == "" {
+		return errors.New("ACME hostname must be set if ACME certs are used")
 	}
 	return nil
 }

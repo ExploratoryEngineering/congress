@@ -55,3 +55,13 @@ We've made a few tools that can be used when testing Congress:
 * Datagenerator - generates data for your backend. The tool uses a direct
   PostgreSQL database connection to create data.
 
+## Let's Encrypt certificates
+
+The server supports Let's Encrypt certificates out of the box. Configure the
+certificates with the parameters `acme-cert`, `acme-hostname` and `acme-secret-dir`.
+
+Note that the hostname must be reachable from the internet, ie the server has
+to be running on its own domain.
+
+The `acme-secret-dir` is the directory where the private key for the certificate
+will be cached.

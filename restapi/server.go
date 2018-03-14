@@ -1,4 +1,5 @@
 package restapi
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -16,6 +17,7 @@ package restapi
 //
 import (
 	"context"
+	"crypto/tls"
 	"fmt"
 	"net/http"
 	"time"
@@ -25,6 +27,8 @@ import (
 	"github.com/ExploratoryEngineering/congress/server"
 	"github.com/ExploratoryEngineering/congress/utils"
 	"github.com/telenordigital/goconnect"
+
+	"golang.org/x/crypto/acme/autocert"
 	"golang.org/x/net/websocket"
 )
 
@@ -64,6 +68,18 @@ func NewServer(loopbackOnly bool, scontext *server.Context, config *server.Confi
 	ret.srv = &http.Server{
 		Addr:    fmt.Sprintf("%s:%d", host, ret.port),
 		Handler: ret,
+	}
+
+	if config.ACMECert {
+		logging.Info("Using Let's Encrypt for certificates")
+		// See https://godoc.org/golang.org/x/crypto/acme/autocert#example-Manager
+		m := &autocert.Manager{
+			Cache:      autocert.DirCache(config.ACMESecretDir),
+			Prompt:     autocert.AcceptTOS,
+			HostPolicy: autocert.HostWhitelist(config.ACMEHost),
+		}
+		go http.ListenAndServe(":http", m.HTTPHandler(nil))
+		ret.srv.TLSConfig = &tls.Config{GetCertificate: m.GetCertificate}
 	}
 
 	handler := ret.handler()
@@ -120,9 +136,13 @@ func NewServer(loopbackOnly bool, scontext *server.Context, config *server.Confi
 func (h *Server) Start() error {
 	logging.Info("HTTP server listening on port %d", h.port)
 	go func() {
-		if h.config.TLSCertFile != "" && h.config.TLSKeyFile != "" {
+		if h.config.ACMECert {
+			if err := h.srv.ListenAndServeTLS("", ""); err != http.ErrServerClosed {
+				logging.Error("ListenAndServeTLS returned error: %v", err)
+			}
+		} else if h.config.TLSCertFile != "" && h.config.TLSKeyFile != "" {
 			if err := h.srv.ListenAndServeTLS(h.config.TLSCertFile, h.config.TLSKeyFile); err != http.ErrServerClosed {
-				logging.Error("ListenAndServerTLS returned error: %v", err)
+				logging.Error("ListenAndServeTLS returned error: %v", err)
 			}
 		} else {
 			if err := h.srv.ListenAndServe(); err != http.ErrServerClosed {

@@ -1,4 +1,5 @@
 package main
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -57,6 +58,9 @@ func init() {
 	flag.IntVar(&config.DBMaxConnections, "db-max-connections", server.DefaultMaxConns, "Maximum DB connections")
 	flag.IntVar(&config.DBIdleConnections, "db-max-idle-connections", server.DefaultIdleConns, "Maximum idle DB connections")
 	flag.DurationVar(&config.DBConnLifetime, "db-max-lifetime-connections", server.DefaultConnLifetime, "Maximum life time of DB connections")
+	flag.BoolVar(&config.ACMECert, "acme-cert", false, "Enable Let's Encrypt certificates. Requires host name")
+	flag.StringVar(&config.ACMEHost, "acme-hostname", "", "Host name to use when requesting certificates from Let's Encrypt")
+	flag.StringVar(&config.ACMESecretDir, "acme-secret-dir", "secret-dir", "Directory for ACME certificate secrets")
 	flag.Parse()
 }
 

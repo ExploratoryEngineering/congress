@@ -1,3 +1,5 @@
+//+build amqp
+
 package server
 
 //
@@ -53,6 +55,10 @@ type amqpTransport struct {
 	containerId   string
 	errors        chan LogEntry
 	address       string
+}
+
+func init() {
+	transports["amqp"] = amqpTransportFromConfig
 }
 
 // amqpTransportFromConfig creates a new AMQP transport if the supplied

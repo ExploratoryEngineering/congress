@@ -1,4 +1,5 @@
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -49,6 +50,10 @@ type mqttTransport struct {
 	clientID  string
 	errors    chan LogEntry
 	topicName string
+}
+
+func init() {
+	transports["mqtt"] = mqttTransportFromConfig
 }
 
 // MQTTTransportFromConfig creates a new MQTT transport if the supplied

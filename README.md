@@ -65,3 +65,8 @@ to be running on its own domain.
 
 The `acme-secret-dir` is the directory where the private key for the certificate
 will be cached.
+
+## AMQP support
+
+The AMQP support uses the CGo bindings to the [Apache Qpid library](https://qpid.apache.org/index.html).
+Set the build tag `amqp` to enable the output (ie build with `go build -tags amqp`)

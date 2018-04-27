@@ -1,4 +1,5 @@
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -48,12 +49,8 @@ func getTransport(op *model.AppOutput) transport {
 
 type transportFactory func(model.TransportConfig) transport
 
-var transports = map[string]transportFactory{
-	"mqtt":   mqttTransportFromConfig,
-	"amqp":   amqpTransportFromConfig,
-	"log":    newLogTransport,
-	"awsiot": awsiotTransportFromConfig,
-}
+// Each impplementation populates this map in their own init functino
+var transports = map[string]transportFactory{}
 
 // DeviceData is a wrapper for the model.DeviceData struct. This is used both
 // in the ../data endpoints and via websockets.
@@ -92,24 +89,4 @@ func newDeviceDataFromPayloadMessage(message *PayloadMessage) *deviceData {
 		DataRate:   message.FrameContext.GatewayContext.Radio.DataRate,
 		GatewayEUI: message.FrameContext.GatewayContext.Gateway.GatewayEUI.String(),
 	}
-}
-
-// Testing code below -------------------------------------------------------
-// logTransport is a simple log-only transport configuration. This is only
-// used for testing.
-type logTransport struct {
-}
-
-func newLogTransport(tc model.TransportConfig) transport {
-	return &logTransport{}
-}
-
-func (d *logTransport) open(ml *MemoryLogger) bool {
-	return true
-}
-
-func (d *logTransport) send(msg interface{}, ml *MemoryLogger) bool {
-	return true
-}
-func (d *logTransport) close(ml *MemoryLogger) {
 }

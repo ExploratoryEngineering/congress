@@ -1,4 +1,5 @@
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -46,6 +47,10 @@ type awsiotTransport struct {
 	clientCert string
 	privateKey string
 	client     mqtt.Client
+}
+
+func init() {
+	transports["awsiot"] = awsiotTransportFromConfig
 }
 
 func awsiotTransportFromConfig(tc model.TransportConfig) transport {

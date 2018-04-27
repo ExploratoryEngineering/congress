@@ -24,6 +24,7 @@ import (
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/storage"
 	"github.com/ExploratoryEngineering/logging"
+	"github.com/ExploratoryEngineering/rest"
 	"github.com/telenordigital/goconnect"
 )
 
@@ -65,7 +66,7 @@ func (h *Server) isValidToken(headerToken, method string, path string) (bool, st
 
 // tokenInfoHandler handles GET and DELETE requests to a particular token
 func (h *Server) tokenInfoHandler(w http.ResponseWriter, r *http.Request) {
-	t := r.Context().Value(pathParameter("token"))
+	t := r.Context().Value(rest.PathParameter("token"))
 	token, ok := t.(string)
 	if !ok {
 		// This shouldn't happen but it is a nice failsafe

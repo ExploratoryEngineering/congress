@@ -24,6 +24,7 @@ import (
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/storage"
 	"github.com/ExploratoryEngineering/logging"
+	"github.com/ExploratoryEngineering/rest"
 	"github.com/telenordigital/goconnect"
 )
 
@@ -66,7 +67,7 @@ func (h *Server) tagPostResource(w http.ResponseWriter, r *http.Request, tags mo
 // it returns true the tag has been changed (and the tags should be stored in
 // the storage backend)
 func (h *Server) tagNameResource(w http.ResponseWriter, r *http.Request, tags model.Tags) bool {
-	unescapedName, ok := r.Context().Value(pathParameter("name")).(string)
+	unescapedName, ok := r.Context().Value(rest.PathParameter("name")).(string)
 	if !ok {
 		http.Error(w, "Missing name from path", http.StatusInternalServerError)
 		return false
@@ -247,7 +248,7 @@ func (h *Server) ensureSessionAndToken(w http.ResponseWriter, r *http.Request) (
 		http.Error(w, "No session found", http.StatusUnauthorized)
 		return nil, nil, false
 	}
-	t := r.Context().Value(pathParameter("token"))
+	t := r.Context().Value(rest.PathParameter("token"))
 	tokenStr, ok := t.(string)
 	if !ok {
 		// This shouldn't happen but it is a nice failsafe

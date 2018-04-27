@@ -1,4 +1,5 @@
 package restapi
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -20,12 +21,13 @@ import (
 
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/rest"
 	"github.com/telenordigital/goconnect"
 )
 
 // Extract EUI from path parameter in context
 func euiFromPathParameter(r *http.Request, name string) (protocol.EUI, error) {
-	p := r.Context().Value(pathParameter(name))
+	p := r.Context().Value(rest.PathParameter(name))
 	euiStr, ok := p.(string)
 	if !ok {
 		return protocol.EUI{}, fmt.Errorf("no parameter named %s in request context", name)

@@ -26,6 +26,7 @@ import (
 	"github.com/ExploratoryEngineering/congress/server"
 	"github.com/ExploratoryEngineering/congress/utils"
 	"github.com/ExploratoryEngineering/logging"
+	"github.com/ExploratoryEngineering/rest"
 	"github.com/telenordigital/goconnect"
 
 	"golang.org/x/crypto/acme/autocert"
@@ -101,7 +102,7 @@ func NewServer(loopbackOnly bool, scontext *server.Context, config *server.Confi
 		}))
 
 		ret.mux.Handle("/connect/", connect.Handler())
-		ret.mux.HandleFunc("/connect/profile", addCORSHeaders(connect.SessionProfile))
+		ret.mux.HandleFunc("/connect/profile", rest.AddCORSHeaders(connect.SessionProfile))
 		// This is the handler that checks if a there's a token *or* the
 		// Connect ID session is set.
 		connectHandler := connect.NewAuthHandlerFunc(handler)
@@ -128,7 +129,7 @@ func NewServer(loopbackOnly bool, scontext *server.Context, config *server.Confi
 		}
 	}
 
-	ret.mux.HandleFunc("/", addCORSHeaders(handler))
+	ret.mux.HandleFunc("/", rest.AddCORSHeaders(handler))
 	return ret, nil
 }
 
@@ -179,7 +180,7 @@ func (h *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 // Handler returns a HandlerFunc with all the routes for the endpoint
 func (h *Server) handler() http.HandlerFunc {
-	router := parameterRouter{}
+	router := rest.NewParameterRouter()
 	router.AddRoute("/", h.rootHandler)
 	router.AddRoute("/status", h.statusHandler)
 	router.AddRoute("/applications", h.applicationListHandler)

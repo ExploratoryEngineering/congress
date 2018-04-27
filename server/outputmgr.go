@@ -20,7 +20,6 @@ import (
 	"sync"
 
 	"github.com/ExploratoryEngineering/congress/model"
-	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/logging"
 )
 
@@ -34,8 +33,8 @@ type outputStorage interface {
 
 // Event routing interface used by the app output manager
 type router interface {
-	Publish(eui protocol.EUI, msg interface{})
-	Subscribe(eui protocol.EUI) <-chan interface{}
+	Publish(key interface{}, msg interface{})
+	Subscribe(key interface{}) <-chan interface{}
 	Unsubscribe(msg <-chan interface{})
 }
 

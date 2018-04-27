@@ -23,19 +23,20 @@ import (
 	"github.com/ExploratoryEngineering/congress/monitoring"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/pubsub"
 )
 
 // Pipeline data structures used by the server
 
 // Context is the request/response context. It is passed along with the packets in various states.
 type Context struct {
-	Storage       *storage.Storage   // The storage layer
-	Terminator    chan bool          // Terminator channel. Throw something on this to terminate the processes.
-	FrameOutput   *FrameOutputBuffer // Device aggregator instance. Common instance for processors.
-	Config        *Configuration     // Main configuration
-	KeyGenerator  *KeyGenerator      // Key generator for server
-	GwEventRouter *EventRouter       // Router for GW events
-	AppRouter     *EventRouter       // Router for app data
+	Storage       *storage.Storage    // The storage layer
+	Terminator    chan bool           // Terminator channel. Throw something on this to terminate the processes.
+	FrameOutput   *FrameOutputBuffer  // Device aggregator instance. Common instance for processors.
+	Config        *Configuration      // Main configuration
+	KeyGenerator  *KeyGenerator       // Key generator for server
+	GwEventRouter *pubsub.EventRouter // Router for GW events
+	AppRouter     *pubsub.EventRouter // Router for app data
 	AppOutput     *AppOutputManager
 }
 

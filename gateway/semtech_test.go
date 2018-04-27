@@ -1,4 +1,5 @@
 package gateway
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -28,6 +29,7 @@ import (
 	"github.com/ExploratoryEngineering/congress/server"
 	"github.com/ExploratoryEngineering/congress/storage/memstore"
 	"github.com/ExploratoryEngineering/congress/utils"
+	"github.com/ExploratoryEngineering/pubsub"
 )
 
 type serverConfig struct {
@@ -45,7 +47,7 @@ func setupServer(t *testing.T) serverConfig {
 		t.Fatal("Could not allocate free port: ", err)
 	}
 
-	router := server.NewEventRouter(5)
+	router := pubsub.NewEventRouter(5)
 	context := server.Context{GwEventRouter: &router, Config: &server.Configuration{}}
 	ret.forwarder = NewGenericPacketForwarder(port, gwStorage, &context)
 

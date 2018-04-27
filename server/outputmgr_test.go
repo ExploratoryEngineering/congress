@@ -1,4 +1,5 @@
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -21,6 +22,7 @@ import (
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/storage/memstore"
+	"github.com/ExploratoryEngineering/pubsub"
 )
 
 func makeRandomEUI() protocol.EUI {
@@ -52,7 +54,7 @@ func TestAppOutputManager(t *testing.T) {
 		opList = append(opList, op)
 	}
 
-	router := NewEventRouter(5)
+	router := pubsub.NewEventRouter(5)
 	appMgr := NewAppOutputManager(&router)
 
 	appMgr.LoadOutputs(outputStorage)

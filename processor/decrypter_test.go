@@ -1,4 +1,5 @@
 package processor
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -20,6 +21,7 @@ import (
 
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/pubsub"
 )
 
 func createEncryptedTestMessage() protocol.PHYPayload {
@@ -47,7 +49,7 @@ func createEncryptedTestMessage() protocol.PHYPayload {
 func TestDecrypterProcessing(t *testing.T) {
 
 	s := NewStorageTestContext()
-	router := server.NewEventRouter(5)
+	router := pubsub.NewEventRouter(5)
 	context := server.Context{Storage: &s, AppRouter: &router}
 
 	input := make(chan server.LoRaMessage)

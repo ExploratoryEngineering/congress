@@ -27,6 +27,7 @@ import (
 	"github.com/ExploratoryEngineering/congress/storage/dbstore"
 	"github.com/ExploratoryEngineering/congress/storage/memstore"
 	"github.com/ExploratoryEngineering/logging"
+	"github.com/ExploratoryEngineering/pubsub"
 )
 
 // Server is the main Congress server process. It will launch several
@@ -94,8 +95,8 @@ func NewServer(config *server.Configuration) (*Server, error) {
 	}
 	frameOutput := server.NewFrameOutputBuffer()
 
-	appRouter := server.NewEventRouter(5)
-	gwEventRouter := server.NewEventRouter(5)
+	appRouter := pubsub.NewEventRouter(5)
+	gwEventRouter := pubsub.NewEventRouter(5)
 	c.context = &server.Context{
 		Storage:       &datastore,
 		Terminator:    make(chan bool),

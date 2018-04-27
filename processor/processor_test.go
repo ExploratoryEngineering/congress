@@ -22,6 +22,7 @@ import (
 	"time"
 
 	"github.com/ExploratoryEngineering/congress/band"
+	"github.com/ExploratoryEngineering/pubsub"
 
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
@@ -173,8 +174,8 @@ func newTestContext(t *testing.T) testContext {
 	frameOutput := server.NewFrameOutputBuffer()
 	keyGenerator, _ := server.NewEUIKeyGenerator(ret.config.RootMA(), uint32(ret.config.NetworkID), ret.datastore.Sequence)
 
-	appRouter := server.NewEventRouter(5)
-	gwEventRouter := server.NewEventRouter(5)
+	appRouter := pubsub.NewEventRouter(5)
+	gwEventRouter := pubsub.NewEventRouter(5)
 	ret.context = &server.Context{
 		Storage:       &ret.datastore,
 		Terminator:    make(chan bool),

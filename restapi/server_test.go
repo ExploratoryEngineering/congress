@@ -1,4 +1,5 @@
 package restapi
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -27,6 +28,7 @@ import (
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/server"
 	"github.com/ExploratoryEngineering/congress/storage/memstore"
+	"github.com/ExploratoryEngineering/pubsub"
 )
 
 var ma = protocol.MA{Prefix: [5]byte{0, 1, 3, 4, 5}, Size: protocol.MALarge}
@@ -46,7 +48,7 @@ func createTestServer(config server.Configuration) *Server {
 
 	fob := server.NewFrameOutputBuffer()
 
-	appRouter := server.NewEventRouter(5)
+	appRouter := pubsub.NewEventRouter(5)
 	context := &server.Context{
 		Storage:      &store,
 		FrameOutput:  &fob,

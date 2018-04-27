@@ -1,4 +1,5 @@
 package processor
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -15,8 +16,8 @@ package processor
 //limitations under the License.
 //
 import (
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // Pipeline is the main processing pipeline for the server. Each step in

@@ -1,4 +1,5 @@
 package dbstore
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -18,10 +19,10 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // sbDeviceStorage is a device storage that stores data in PostgreSQL

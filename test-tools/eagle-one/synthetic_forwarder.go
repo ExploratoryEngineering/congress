@@ -1,4 +1,5 @@
 package main
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -24,8 +25,8 @@ import (
 	"encoding/json"
 
 	cgw "github.com/ExploratoryEngineering/congress/gateway"
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // SyntheticForwarder is a synthetic packet forwarder that exposes two channels

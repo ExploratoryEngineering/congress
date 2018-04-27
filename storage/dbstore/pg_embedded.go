@@ -1,4 +1,5 @@
 package dbstore
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -25,8 +26,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/utils"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // PostgresEmbedded embeds PostgreSQL and allows it to be controlled from

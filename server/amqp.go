@@ -22,8 +22,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/logging"
 	"qpid.apache.org/amqp"
 	"qpid.apache.org/electron"
 )

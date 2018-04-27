@@ -1,4 +1,5 @@
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -18,9 +19,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/utils"
+	"github.com/ExploratoryEngineering/logging"
 	"github.com/surgemq/surgemq/service"
 )
 
@@ -60,7 +61,7 @@ var mqttConfig = `
 		"type": "mqtt",
 		"endpoint": "localhost",
 		"port": 1883,
-		"tls": false, 
+		"tls": false,
 		"certCheck": false,
 		"username": "user1",
 		"password": "user1",

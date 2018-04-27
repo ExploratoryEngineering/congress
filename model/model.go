@@ -1,4 +1,5 @@
 package model
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -24,8 +25,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // Data model for LoRaWAN network. The data model is used in parts of the decoding

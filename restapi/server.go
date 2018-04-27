@@ -22,10 +22,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/server"
 	"github.com/ExploratoryEngineering/congress/utils"
+	"github.com/ExploratoryEngineering/logging"
 	"github.com/telenordigital/goconnect"
 
 	"golang.org/x/crypto/acme/autocert"

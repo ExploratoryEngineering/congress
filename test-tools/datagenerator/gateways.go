@@ -1,4 +1,5 @@
 package main
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -19,9 +20,9 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 func generateGateways(id model.UserID, count int, datastore storage.Storage) []model.Gateway {

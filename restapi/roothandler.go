@@ -1,4 +1,5 @@
 package restapi
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -18,7 +19,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // StatusHandler shows the status of the server

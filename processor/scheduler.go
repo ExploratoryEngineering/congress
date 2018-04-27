@@ -1,4 +1,5 @@
 package processor
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -19,10 +20,10 @@ import (
 
 	"github.com/ExploratoryEngineering/congress/monitoring"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // Scheduler is the process that schedules downlink frames. The sceduler reads

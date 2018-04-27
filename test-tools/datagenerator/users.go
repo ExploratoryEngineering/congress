@@ -1,4 +1,5 @@
 package main
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -18,10 +19,10 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/server"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 var lastnames = []string{

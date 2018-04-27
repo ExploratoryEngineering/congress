@@ -1,4 +1,5 @@
 package main
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -18,7 +19,6 @@ import (
 	"errors"
 
 	"github.com/ExploratoryEngineering/congress/gateway"
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/monitoring"
 	"github.com/ExploratoryEngineering/congress/processor"
 	"github.com/ExploratoryEngineering/congress/restapi"
@@ -26,6 +26,7 @@ import (
 	"github.com/ExploratoryEngineering/congress/storage"
 	"github.com/ExploratoryEngineering/congress/storage/dbstore"
 	"github.com/ExploratoryEngineering/congress/storage/memstore"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // Server is the main Congress server process. It will launch several

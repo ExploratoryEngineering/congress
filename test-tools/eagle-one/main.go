@@ -1,4 +1,5 @@
 package main
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -19,7 +20,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/logging"
 	"github.com/telenordigital/lassie-go"
 )
 

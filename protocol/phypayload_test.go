@@ -1,4 +1,5 @@
 package protocol
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -19,7 +20,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 func TestDecodeJoinAccept(t *testing.T) {

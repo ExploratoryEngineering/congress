@@ -1,4 +1,5 @@
 package gateway
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -28,11 +29,11 @@ import (
 
 	"github.com/ExploratoryEngineering/congress/band"
 	"github.com/ExploratoryEngineering/congress/events/gwevents"
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/server"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 var defaultBand band.FrequencyPlan

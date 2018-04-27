@@ -1,4 +1,5 @@
 package restapi
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -21,10 +22,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // A set of entities to make the conversion to and from API JSON types

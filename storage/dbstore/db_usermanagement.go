@@ -1,4 +1,5 @@
 package dbstore
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -18,9 +19,9 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 const ownerKeyName string = "ownerid"

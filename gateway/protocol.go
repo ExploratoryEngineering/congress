@@ -1,4 +1,5 @@
 package gateway
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -18,8 +19,8 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // The protocol parts - ie the Semtech packet forwarder

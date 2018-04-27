@@ -22,8 +22,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // Configuration holds the configuration for the system

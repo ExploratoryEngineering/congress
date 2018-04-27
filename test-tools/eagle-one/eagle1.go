@@ -1,4 +1,5 @@
 package main
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -18,8 +19,8 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/logging"
 	lassie "github.com/telenordigital/lassie-go"
 )
 

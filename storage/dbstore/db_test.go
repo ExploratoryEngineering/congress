@@ -1,4 +1,5 @@
 package dbstore
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -20,9 +21,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/storage"
 	"github.com/ExploratoryEngineering/congress/storage/storagetest"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 var pgdb *postgresEmbedded

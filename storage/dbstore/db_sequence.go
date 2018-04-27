@@ -1,4 +1,5 @@
 package dbstore
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -19,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // This will be the db-backed sequence implementation

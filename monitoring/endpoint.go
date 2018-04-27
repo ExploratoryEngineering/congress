@@ -1,4 +1,5 @@
 package monitoring
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -26,8 +27,8 @@ import (
 	"net/http"
 	"net/http/pprof"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/utils"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // This is the default endpoint for the expvar package. The location isn't

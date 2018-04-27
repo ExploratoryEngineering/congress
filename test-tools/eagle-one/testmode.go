@@ -1,4 +1,5 @@
 package main
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -22,8 +23,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/logging"
 	"github.com/telenordigital/lassie-go"
 
 	"github.com/eclipse/paho.mqtt.golang"

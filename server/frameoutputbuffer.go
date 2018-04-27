@@ -1,4 +1,5 @@
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -19,9 +20,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // frameOutput holds the aggregated output for the device that will fit into

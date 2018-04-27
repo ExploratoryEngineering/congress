@@ -1,4 +1,5 @@
 package dbstore
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -21,10 +22,10 @@ import (
 
 	"net"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 type dbGatewayStorage struct {
@@ -54,18 +55,18 @@ func NewDBGatewayStorage(db *sql.DB, userManagement storage.UserManagement) (sto
 
 	var err error
 	sqlSelect := `
-		SELECT 
-			gw.gateway_eui, 
-			gw.latitude, 
-			gw.longitude, 
-			gw.altitude, 
-			gw.ip, 
-			gw.strict_ip, 
-			gw.tags 
-		FROM 
+		SELECT
+			gw.gateway_eui,
+			gw.latitude,
+			gw.longitude,
+			gw.altitude,
+			gw.ip,
+			gw.strict_ip,
+			gw.tags
+		FROM
 			lora_gateway gw,
 			lora_owner o
-		WHERE 
+		WHERE
 			gw.owner_id = o.owner_id AND o.user_id = $1`
 
 	if ret.listStatement, err = db.Prepare(sqlSelect); err != nil {
@@ -74,73 +75,73 @@ func NewDBGatewayStorage(db *sql.DB, userManagement storage.UserManagement) (sto
 
 	sqlInsert := `
 		INSERT INTO lora_gateway (
-			gateway_eui, 
-			latitude, 
-			longitude, 
-			altitude, 
-			ip, 
-			strict_ip, 
+			gateway_eui,
+			latitude,
+			longitude,
+			altitude,
+			ip,
+			strict_ip,
 			owner_id,
-			tags) 
+			tags)
 		VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`
 	if ret.putStatement, err = db.Prepare(sqlInsert); err != nil {
 		return nil, fmt.Errorf("unable to prepare insert statement: %v", err)
 	}
 
 	sqlDelete := `
-		DELETE FROM 
-			lora_gateway gw 
-		USING 
+		DELETE FROM
+			lora_gateway gw
+		USING
 			lora_owner o
-		WHERE 
+		WHERE
 			gw.gateway_eui = $1 AND gw.owner_id = o.owner_id AND o.user_id = $2`
 	if ret.deleteStatement, err = db.Prepare(sqlDelete); err != nil {
 		return nil, fmt.Errorf("unable to prepare delete statement: %v", err)
 	}
 
 	sqlSelectOne := `
-		SELECT 
-			gw.gateway_eui, 
-			gw.latitude, 
-			gw.longitude, 
-			gw.altitude, 
-			gw.ip, 
+		SELECT
+			gw.gateway_eui,
+			gw.latitude,
+			gw.longitude,
+			gw.altitude,
+			gw.ip,
 			gw.strict_ip,
 			gw.tags
-		FROM 
+		FROM
 			lora_gateway gw,
 			lora_owner o
-		WHERE 
+		WHERE
 			gw.gateway_eui = $1 AND gw.owner_id = o.owner_id AND o.user_id = $2`
 	if ret.getStatement, err = db.Prepare(sqlSelectOne); err != nil {
 		return nil, fmt.Errorf("unable to prepare select statement: %v", err)
 	}
 
 	sysGetStatement := `
-		SELECT 
-			gw.gateway_eui, 
-			gw.latitude, 
-			gw.longitude, 
-			gw.altitude, 
-			gw.ip, 
+		SELECT
+			gw.gateway_eui,
+			gw.latitude,
+			gw.longitude,
+			gw.altitude,
+			gw.ip,
 			gw.strict_ip,
 			gw.tags
-		FROM 
+		FROM
 			lora_gateway gw
-		WHERE 
+		WHERE
 			gw.gateway_eui = $1`
 	if ret.getSysStatement, err = db.Prepare(sysGetStatement); err != nil {
 		return nil, fmt.Errorf("unable to prepare system get statement: %v", err)
 	}
 
 	updateStatement := `
-		UPDATE 
+		UPDATE
 			lora_gateway gw
-		SET 
+		SET
 			latitude = $1, longitude = $2, altitude = $3, ip = $4, strict_ip = $5, tags = $6
-		FROM 
+		FROM
 			lora_owner o
-		WHERE 
+		WHERE
 			gw.gateway_eui = $7 AND gw.owner_id = o.owner_id AND o.user_id = $8
 	`
 	if ret.updateStatement, err = db.Prepare(updateStatement); err != nil {

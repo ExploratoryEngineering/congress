@@ -1,4 +1,5 @@
 package processor
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -17,11 +18,11 @@ package processor
 import (
 	"time"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/monitoring"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/server"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // Encoder receives LoRaMessage data structures on a channel, encodes into a

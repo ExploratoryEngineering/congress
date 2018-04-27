@@ -1,4 +1,5 @@
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -21,8 +22,8 @@ import (
 
 	"fmt"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // This is the implementation of the message dispatcher process that grabs

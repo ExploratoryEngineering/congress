@@ -1,4 +1,5 @@
 package dbstore
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -20,10 +21,10 @@ import (
 
 	"encoding/base64"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // dbDataStorage is a PostgreSQL-backend data storage
@@ -94,11 +95,11 @@ func NewDBDataStorage(db *sql.DB, userManagement storage.UserManagement) (storag
 	}
 
 	sqlDataList := `
-		SELECT d.device_eui, d.data, d.time_stamp, gateway_eui, rssi, snr, frequency, data_rate, d.dev_addr 
-		FROM lora_device_data d 
-			INNER JOIN lora_device dev ON d.device_eui = dev.eui 
-			INNER JOIN lora_application app ON dev.application_eui = app.eui 
-		WHERE app.eui = $1 
+		SELECT d.device_eui, d.data, d.time_stamp, gateway_eui, rssi, snr, frequency, data_rate, d.dev_addr
+		FROM lora_device_data d
+			INNER JOIN lora_device dev ON d.device_eui = dev.eui
+			INNER JOIN lora_application app ON dev.application_eui = app.eui
+		WHERE app.eui = $1
 			ORDER BY d.time_stamp DESC
 		LIMIT $2`
 	if ret.appDataList, err = db.Prepare(sqlDataList); err != nil {
@@ -107,19 +108,19 @@ func NewDBDataStorage(db *sql.DB, userManagement storage.UserManagement) (storag
 
 	sqlPutDownstream := `
 		INSERT INTO lora_downstream_message (
-			device_eui, 
-			data, 
+			device_eui,
+			data,
 			port,
-			ack, 
+			ack,
 			created_time,
-			sent_time, 
-			ack_time) 
+			sent_time,
+			ack_time)
 		VALUES (
-			$1, 
-			$2, 
-			$3, 
-			$4, 
-			$5, 
+			$1,
+			$2,
+			$3,
+			$4,
+			$5,
 			$6,
 			$7)
 	`
@@ -128,9 +129,9 @@ func NewDBDataStorage(db *sql.DB, userManagement storage.UserManagement) (storag
 	}
 
 	sqlDeleteDownsteram := `
-		DELETE FROM 
-			lora_downstream_message 
-		WHERE 
+		DELETE FROM
+			lora_downstream_message
+		WHERE
 			device_eui = $1
 	`
 	if ret.deleteDownstream, err = db.Prepare(sqlDeleteDownsteram); err != nil {
@@ -139,10 +140,10 @@ func NewDBDataStorage(db *sql.DB, userManagement storage.UserManagement) (storag
 
 	sqlUpdateDownstream := `
 		UPDATE lora_downstream_message
-			SET 
-				sent_time = $1, 
-				ack_time = $2 
-			WHERE 
+			SET
+				sent_time = $1,
+				ack_time = $2
+			WHERE
 				device_eui = $3
 	`
 	if ret.updateDownstream, err = db.Prepare(sqlUpdateDownstream); err != nil {
@@ -150,16 +151,16 @@ func NewDBDataStorage(db *sql.DB, userManagement storage.UserManagement) (storag
 	}
 
 	sqlGetDownstream := `
-		SELECT 
-			data, 
+		SELECT
+			data,
 			port,
-			ack, 
-			created_time, 
-			sent_time, 
-			ack_time 
-		FROM 
-			lora_downstream_message 
-		WHERE 
+			ack,
+			created_time,
+			sent_time,
+			ack_time
+		FROM
+			lora_downstream_message
+		WHERE
 			device_eui = $1
 	`
 	if ret.getDownstream, err = db.Prepare(sqlGetDownstream); err != nil {

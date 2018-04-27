@@ -1,4 +1,5 @@
 package processor
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -17,9 +18,9 @@ package processor
 import (
 	"github.com/ExploratoryEngineering/congress/monitoring"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // MACProcessor is the process responsible for processing the MAC commands.

@@ -1,4 +1,5 @@
 package cmac
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -22,7 +23,7 @@ import (
 	"encoding/hex"
 	"math"
 
-	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 /*

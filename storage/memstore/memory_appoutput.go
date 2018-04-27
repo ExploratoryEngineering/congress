@@ -1,4 +1,5 @@
 package memstore
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -19,10 +20,10 @@ import (
 
 	"time"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // MemoryOutput is a memory-backed output storage

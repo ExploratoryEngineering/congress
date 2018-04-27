@@ -1,4 +1,5 @@
 package monitoring
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -17,7 +18,7 @@ package monitoring
 import (
 	"time"
 
-	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // Timer is responsible for timings throughout the pipeline. Timing

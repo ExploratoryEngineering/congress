@@ -1,3 +1,5 @@
+//+build amqp
+
 package server
 
 //
@@ -62,7 +64,7 @@ var amqpConfig = `
 		"type": "amqp",
 		"endpoint": "localhost",
 		"port": 5672,
-		"tls": false, 
+		"tls": false,
 		"certCheck": false,
         "containerId": "test-client",
 		"allowInsecure": true

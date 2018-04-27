@@ -1,4 +1,5 @@
 package dbstore
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -17,7 +18,7 @@ package dbstore
 import (
 	"testing"
 
-	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // Test the embedded PostgreSQL database

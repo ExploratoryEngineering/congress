@@ -1,4 +1,5 @@
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -17,8 +18,8 @@ package server
 import (
 	"sync"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/protocol"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 type route struct {

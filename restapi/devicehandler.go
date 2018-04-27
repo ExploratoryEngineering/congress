@@ -1,4 +1,5 @@
 package restapi
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -26,10 +27,10 @@ import (
 
 	"github.com/ExploratoryEngineering/congress/monitoring"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 func (s *Server) deviceList(w http.ResponseWriter, r *http.Request, appEUI protocol.EUI) {

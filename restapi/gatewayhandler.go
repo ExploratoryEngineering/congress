@@ -1,4 +1,5 @@
 package restapi
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -23,10 +24,10 @@ import (
 	"time"
 
 	"github.com/ExploratoryEngineering/congress/events/gwevents"
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/monitoring"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 	"golang.org/x/net/websocket"
 )
 

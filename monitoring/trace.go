@@ -1,4 +1,5 @@
 package monitoring
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -23,7 +24,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 //

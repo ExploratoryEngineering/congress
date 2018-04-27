@@ -1,4 +1,5 @@
 package protocol
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -17,7 +18,7 @@ package protocol
 import (
 	"sort"
 
-	"github.com/ExploratoryEngineering/congress/logging"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // MACCommandSet is a collection of MAC commands. The command sets have an

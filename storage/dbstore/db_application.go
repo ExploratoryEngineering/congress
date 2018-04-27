@@ -1,4 +1,5 @@
 package dbstore
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -18,10 +19,10 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/model"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/storage"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // dbApplicationStorage implements application storage for PostgreSQL.
@@ -55,7 +56,7 @@ func NewDBApplicationStorage(db *sql.DB, userManagement storage.UserManagement) 
 		INSERT INTO
 			lora_application (
 				eui,
-				owner_id, 
+				owner_id,
 				tags)
 		VALUES (
 			$1,
@@ -92,7 +93,7 @@ func NewDBApplicationStorage(db *sql.DB, userManagement storage.UserManagement) 
 	}
 
 	sqlDelete := `
-		DELETE 
+		DELETE
 		FROM lora_application a
 		USING lora_owner o
 		WHERE a.eui = $1 AND a.owner_id = o.owner_id AND o.user_id = $2`

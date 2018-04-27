@@ -1,4 +1,5 @@
 package processor
+
 //
 //Copyright 2018 Telenor Digital AS
 //
@@ -15,10 +16,10 @@ package processor
 //limitations under the License.
 //
 import (
-	"github.com/ExploratoryEngineering/congress/logging"
 	"github.com/ExploratoryEngineering/congress/monitoring"
 	"github.com/ExploratoryEngineering/congress/protocol"
 	"github.com/ExploratoryEngineering/congress/server"
+	"github.com/ExploratoryEngineering/logging"
 )
 
 // Decoder is the process that decodes the bytes received from the gateway interface into go structs.

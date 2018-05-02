@@ -3,6 +3,7 @@
 The RFC can be found here: https://tools.ietf.org/html/rfc4493
 */
 package cmac
+
 //
 //Copyright 2018 Telenor Digital AS
 //

@@ -1,6 +1,7 @@
 /*Package protocol contains the low-level LoRaWAN types
  */
 package protocol
+
 //
 //Copyright 2018 Telenor Digital AS
 //

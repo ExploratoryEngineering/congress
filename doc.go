@@ -5,6 +5,7 @@ as a pipeline with each processing step connected via channels.
 
 */
 package main
+
 //
 //Copyright 2018 Telenor Digital AS
 //

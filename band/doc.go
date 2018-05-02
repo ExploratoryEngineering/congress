@@ -3,6 +3,7 @@
 Currently only the EU868 and US915 bands are defined.
 */
 package band
+
 //
 //Copyright 2018 Telenor Digital AS
 //

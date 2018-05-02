@@ -5,6 +5,7 @@ holding area for types and functions until they can be placed in their proper
 locations.
 */
 package utils
+
 //
 //Copyright 2018 Telenor Digital AS
 //

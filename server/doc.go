@@ -1,6 +1,7 @@
 /*Package server contains the structs used in the pipeline and associated types.
  */
 package server
+
 //
 //Copyright 2018 Telenor Digital AS
 //

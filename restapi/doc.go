@@ -10,6 +10,7 @@ The most relevant endpoints are as follows (GET and POST methods are supported):
 
 */
 package restapi
+
 //
 //Copyright 2018 Telenor Digital AS
 //

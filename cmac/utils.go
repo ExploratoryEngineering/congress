@@ -1,4 +1,5 @@
 package cmac
+
 //
 //Copyright 2018 Telenor Digital AS
 //

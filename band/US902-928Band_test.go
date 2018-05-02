@@ -86,7 +86,7 @@ func TestTxPowerUS(t *testing.T) {
 			t.Errorf("%s, %s [7.2.3]", err, b.Name())
 		}
 		if power != expectedOutput[i] {
-			t.Errorf("Wrong TxPower configuraton for %d, %s [7.2.3]", power, b.Name())
+			t.Errorf("Wrong TxPower configuration for %d, %s [7.2.3]", power, b.Name())
 		}
 	}
 

@@ -26,7 +26,7 @@ var (
 	ErrParameterOutOfRange = errors.New("parameter out of range")
 	// ErrInvalidParameterFormat is returned when a supplied parameter is invalid
 	ErrInvalidParameterFormat = errors.New("invalid parameter format")
-	// ErrCryptoError is returned when there's an error with the crypto library. It's not a common ocurrence.
+	// ErrCryptoError is returned when there's an error with the crypto library. It's not a common occurrence.
 	ErrCryptoError = errors.New("crypto system error")
 	// ErrInvalidSource is returned when the input buffer contains corrupted data
 	ErrInvalidSource = errors.New("source buffer is corrupted")

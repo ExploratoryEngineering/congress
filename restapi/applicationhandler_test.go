@@ -84,7 +84,7 @@ func TestApplicationRoutes(t *testing.T) {
 		t.Fatalf("Could not GET application from %s: %v", url, err)
 	}
 	if resp.StatusCode != http.StatusOK {
-		t.Fatalf("Expeced 200 OK from %s but got %d", url, resp.StatusCode)
+		t.Fatalf("Expected 200 OK from %s but got %d", url, resp.StatusCode)
 	}
 
 	copy := apiApplication{}

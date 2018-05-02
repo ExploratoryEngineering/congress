@@ -252,7 +252,7 @@ func NewAPIToken(userID UserID, resource string, write bool) (APIToken, error) {
 	return APIToken{token, userID, write, resource, NewTags()}, err
 }
 
-// Equals return true if the token is equal to ther provided token
+// Equals return true if the token is equal to the provided token
 func (t *APIToken) Equals(other APIToken) bool {
 	return t.Token == other.Token && t.UserID == other.UserID &&
 		t.Write == other.Write && t.Resource == other.Resource &&

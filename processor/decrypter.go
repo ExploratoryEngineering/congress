@@ -225,7 +225,7 @@ func (d *Decrypter) Start() {
 		go func(decoded server.LoRaMessage) {
 			decoded.FrameContext.GatewayContext.SectionTimer.Begin(monitoring.TimeDecrypter)
 			if decoded.FrameContext.GatewayContext.RawMessage == nil {
-				logging.Error("Missing raw message representation. Unable to proceeed.")
+				logging.Error("Missing raw message representation. Unable to proceed.")
 				decoded.FrameContext.GatewayContext.SectionTimer.End()
 				return
 			}

@@ -39,7 +39,7 @@ type keyDispatcher struct {
 	keySequence chan uint64
 	keyStorage  storage.KeySequenceStorage
 	interval    uint64
-	acquire     chan bool // aquire channel - signal for "new id requested"
+	acquire     chan bool // acquire channel - signal for "new id requested"
 }
 
 // KeyGenerator generates unique application and device EUIs with the help of

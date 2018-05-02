@@ -386,7 +386,7 @@ func (p *GenericPacketForwarder) encodeAndSend(packet server.GatewayPacket) {
 	timeToProcess := time.Now().Sub(packet.ReceivedAt)
 	const assumedLatency = 0.2
 	// Assume 100ms latency between gateway and
-	// Congress. This is rougly what we can expect in Europe. Norway -> Ireland
+	// Congress. This is roughly what we can expect in Europe. Norway -> Ireland
 	// is about 50 ms; further south is is easily 100ms (or more).
 	if timeToProcess.Seconds() > (packet.Deadline - assumedLatency) {
 		logging.Error("Packet to %s missed deadline of %.2f seconds with assumedLatency of %.2f (took %.2f s)",

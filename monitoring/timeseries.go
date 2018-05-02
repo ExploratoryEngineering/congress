@@ -94,7 +94,7 @@ func (t *TimeSeries) moveIndex(now time.Time) bool {
 	indexDiff := t.diffFunc(now.Sub(t.lastTime))
 	if indexDiff > 0 {
 		// Move index forward corresponding to the time elapsed and
-		// reset the counts inbetween
+		// reset the counts.
 		for i := t.current + 1; i < t.current+indexDiff; i++ {
 			t.counts[i%len] = 0
 		}

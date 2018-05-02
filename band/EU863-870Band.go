@@ -59,7 +59,7 @@ func newEU868() EU868 {
 	}
 }
 
-// Name returns frequencey band name.
+// Name returns frequency band name.
 func (b EU868) Name() string {
 	return "EU 863-870MHz ISM Band"
 }

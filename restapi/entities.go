@@ -426,7 +426,7 @@ type apiAppOutput struct {
 	Status string                `json:"status"`
 }
 
-// newOutputFromModel convers a model output to a client-friendly output
+// newOutputFromModel converts a model output to a client-friendly output
 func newOutputFromModel(src model.AppOutput, log *server.MemoryLogger, status string) apiAppOutput {
 	var logMessages []apiAppOutputLog
 	for _, v := range log.Entries {

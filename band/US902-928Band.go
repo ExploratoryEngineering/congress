@@ -68,7 +68,7 @@ func newUS902() US902 {
 	}
 }
 
-// Name returns frequencey band name.
+// Name returns frequency band name.
 func (b US902) Name() string {
 	return "US 902-928MHz ISM Band"
 }

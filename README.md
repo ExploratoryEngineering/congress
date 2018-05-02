@@ -1,5 +1,10 @@
 # Congress - The LoRa backend server
 
+[![GoDoc](https://godoc.org/github.com/ExploratoryEngineering/congress?status.svg)](https://godoc.org/github.com/ExploratoryEngineering/congress)
+[![Build Status](https://travis-ci.org/ExploratoryEngineering/congress.svg?branch=master)](https://travis-ci.org/ExploratoryEngineering/congress)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ExploratoryEngineering/congress)](https://goreportcard.com/report/github.com/ExploratoryEngineering/congress)
+[![codecov](https://codecov.io/gh/ExploratoryEngineering/congress/branch/master/graph/badge.svg)](https://codecov.io/gh/ExploratoryEngineering/congress)
+
 ## Features
 
 * Supports LoRaWAN 1.1
